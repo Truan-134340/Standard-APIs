@@ -4,7 +4,7 @@
 
 <script>
 const ui = SwaggerUIBundle({
-    url: "openapi.yaml",   // trỏ đến file vừa upload
+    url: "New Collection_test_APIdog.openapi.yaml",   // trỏ đến file vừa upload
     dom_id: '#swagger-ui',
 });
 </script>
