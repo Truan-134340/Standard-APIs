@@ -13,7 +13,6 @@ Search Company Input Indicators
 ## Thử API
 
 <div id="swagger-ui-search-company"></div>
-
 <script>
 window.onload = function () {
   const ui = SwaggerUIBundle({
