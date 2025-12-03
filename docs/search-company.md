@@ -1,6 +1,14 @@
 # Search Company API
 
 Mô tả: API tìm kiếm doanh nghiệp theo indicator/param bạn dùng.
+Search Company Input Indicators
+
+| Field Name        | Data Type             | Description_VN           |
+|-------------|-------------------|-----------------|
+| IsinCode  | string         | Mã chứng khoán quốc tế      |
+| OrganizationName  | string         | Tên đầy đủ của công ty      |
+| TaxCode  | string         | Mã số thuế      |
+
 
 ## Thử API
 
