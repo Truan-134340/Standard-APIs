@@ -2,7 +2,9 @@ site_name: Standard APIs Docs
 
 nav:
   - Home: index.md
-  - API Reference: api.md
+  - APIs:
+      - Search Company: search-company.md
+      - Full API Reference: api.md
 
 theme:
   name: readthedocs
