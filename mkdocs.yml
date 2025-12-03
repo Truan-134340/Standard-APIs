@@ -1,0 +1,8 @@
+site_name: Standard APIs Docs
+
+nav:
+  - Home: docs/index.md
+  - API Reference: docs/api.md
+
+plugins:
+  - search
