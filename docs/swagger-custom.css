@@ -1,0 +1,45 @@
+/* Đổi font chung cho trang */
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Ẩn dòng title xấu xấu "New Collection_test_APIdog" */
+.swagger-ui .info .title {
+  font-size: 0;           /* Ẩn text cũ */
+}
+
+.swagger-ui .info .title::after {
+  content: "Standard APIs – Search Company"; /* Tên đẹp hơn */
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Đổi màu nút GET */
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+  background-color: #2563eb;   /* xanh dương đẹp hơn */
+}
+
+/* Đổi màu nền khối API */
+.swagger-ui .opblock.opblock-get {
+  border-color: #2563eb;
+  background: #f0f5ff;
+}
+
+/* Bo góc + đổ bóng nhẹ cho card API */
+.swagger-ui .opblock {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Đổi màu nút Authorize */
+.swagger-ui .auth-wrapper .authorize__btn {
+  background-color: #10b981;
+  border-radius: 999px;
+}
+
+/* Chỉnh lại size chữ description */
+.swagger-ui .opblock-description-wrapper,
+.swagger-ui .response-col_description__inner {
+  font-size: 14px;
+  line-height: 1.6;
+}
