@@ -1,40 +1,72 @@
 # Search Company API
 
 Mô tả: API tìm kiếm doanh nghiệp theo indicator/param bạn dùng.
-Search Company Input Indicators
 
-| Field Name        | Data Type             | Description_VN           |
-|-------------|-------------------|-----------------|
-| IsinCode  | string         | Mã chứng khoán quốc tế      |
-| OrganizationName  | string         | Tên đầy đủ của công ty      |
-| TaxCode  | string         | Mã số thuế      |
+## Thông tin API
 
+| Thuộc tính | Giá trị |
+|-----------|---------|
+| Method    | GET |
+| Endpoint  | `/api/v1/Standard/SearchCompany` |
+| Auth      | Bearer token |
 
-## Thử API
+---
 
-<div id="swagger-ui-search-company"></div>
+## Thử API (UI custom)
+
+<div id="search-company-ui">
+  <label>
+    Indicator:
+    <input id="indicator-input" type="text" placeholder="Nhập indicator..." />
+  </label>
+  <br/><br/>
+  <label>
+    Bearer Token:
+    <input id="token-input" type="password" placeholder="Nhập token (nếu cần)..." />
+  </label>
+  <br/><br/>
+  <button id="call-btn">Gọi API</button>
+
+  <h3>Kết quả</h3>
+  <pre id="result-box">{ }</pre>
+</div>
+
 <script>
-window.onload = function () {
-  const ui = SwaggerUIBundle({
-    url: "../openapi.yaml",   // dùng chung file spec
-    dom_id: "#swagger-ui-search-company",
-    deepLinking: true,
-  });
+document.getElementById('call-btn').addEventListener('click', async () => {
+  const indicator = document.getElementById('indicator-input').value.trim();
+  const token = document.getElementById('token-input').value.trim();
 
-  // Sau khi render xong, ẩn tất cả operation KHÔNG phải SearchCompany
-  setTimeout(() => {
-    document.querySelectorAll('.opblock').forEach(block => {
-      if (!block.textContent.includes('/api/v1/Standard/SearchCompany')) {
-        block.style.display = 'none';
-      }
-    });
-  }, 800);
-};
+  if (!indicator) {
+    alert('Vui lòng nhập indicator');
+    return;
+  }
+
+  const url = 'https://your-domain.com/api/v1/Standard/SearchCompany'
+            + '?indicator=' + encodeURIComponent(indicator);
+
+  const headers = {
+    'Accept': 'application/json'
+  };
+  if (token) {
+    headers['Authorization'] = 'Bearer ' + token;
+  }
+
+  try {
+    const res = await fetch(url, { headers });
+    const text = await res.text();
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch {
+      data = text;
+    }
+
+    document.getElementById('result-box').textContent =
+      typeof data === 'string'
+        ? data
+        : JSON.stringify(data, null, 2);
+  } catch (err) {
+    document.getElementById('result-box').textContent = 'Error: ' + err;
+  }
+});
 </script>
-
-# Search Company API_Output
-| Field Name        | Data Type             | Description_VN           |
-|-------------|-------------------|-----------------|
-| IsinCode  | string         | Mã chứng khoán quốc tế      |
-| OrganizationName  | string         | Tên đầy đủ của công ty      |
-| TaxCode  | string         | Mã số thuế      |
