@@ -1,6 +1,5 @@
-# Search Company API
-
-Mô tả: API tìm kiếm doanh nghiệp theo indicator/param bạn dùng.
+# SearchCompany
+Search company by indicator
 
 ## Thông tin API
 
@@ -12,7 +11,7 @@ Mô tả: API tìm kiếm doanh nghiệp theo indicator/param bạn dùng.
 
 ---
 
-## Thử API (UI custom)
+## Query Param
 
 <div id="search-company-ui">
   <label>
