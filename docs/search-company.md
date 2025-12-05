@@ -15,13 +15,38 @@ Search company by indicator
 
 <div id="search-company-ui">
   <label>
-    Indicator:
-    <input id="indicator-input" type="text" placeholder="Nhập indicator..." />
+    IsinCode:
+    <input id="indicator-input" type="text" placeholder="string" />
   </label>
   <br/><br/>
   <label>
-    Bearer Token:
-    <input id="token-input" type="password" placeholder="Nhập token (nếu cần)..." />
+    OrganizationName:
+    <input id="token-input" type="text" placeholder="string" />
+  </label>
+  <br/><br/>
+  <label>
+    TaxCode:
+    <input id="token-input" type="text" placeholder="string" />
+  </label>
+  <br/><br/>
+  <label>
+    Ticker:
+    <input id="token-input" type="text" placeholder="string" />
+  </label>
+  <br/><br/>
+  <label>
+    EnterpriseCode:
+    <input id="token-input" type="text" placeholder="string" />
+  </label>
+  <br/><br/>
+  <label>
+    Page:
+    <input id="token-input" type="password" placeholder="integer" />
+  </label>
+  <br/><br/>
+  <label>
+    PageSize:
+    <input id="token-input" type="password" placeholder="integer" />
   </label>
   <br/><br/>
   <button id="call-btn">Gọi API</button>
