@@ -1,45 +1,143 @@
-/* Đổi font chung cho trang */
+/* Font tổng thể */
 body {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Ẩn dòng title xấu xấu "New Collection_test_APIdog" */
+/* Ẩn topbar xanh của Swagger (nếu có) */
+.swagger-ui .topbar {
+  display: none;
+}
+
+/* Khối info trên cùng: để nhỏ, gọn */
+.swagger-ui .info {
+  margin: 0 0 12px 0;
+}
 .swagger-ui .info .title {
-  font-size: 0;           /* Ẩn text cũ */
-}
-
-.swagger-ui .info .title::after {
-  content: "Standard APIs – Search Company"; /* Tên đẹp hơn */
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 600;
 }
-
-/* Đổi màu nút GET */
-.swagger-ui .opblock.opblock-get .opblock-summary-method {
-  background-color: #2563eb;   /* xanh dương đẹp hơn */
+.swagger-ui .info .version,
+.swagger-ui .info .base-url,
+.swagger-ui .info .headerline {
+  display: none; /* ẩn version, base url cho gọn */
 }
 
-/* Đổi màu nền khối API */
-.swagger-ui .opblock.opblock-get {
-  border-color: #2563eb;
-  background: #f0f5ff;
+/* Tổng thể: nền xám rất nhạt, card trắng */
+.swagger-ui .wrapper {
+  padding: 0;
+}
+.swagger-ui .opblock-tag-section {
+  margin: 0;
 }
 
-/* Bo góc + đổ bóng nhẹ cho card API */
+/* Mỗi API block như một card trắng tối giản */
 .swagger-ui .opblock {
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  margin: 8px 0 16px 0;
 }
 
-/* Đổi màu nút Authorize */
-.swagger-ui .auth-wrapper .authorize__btn {
-  background-color: #10b981;
+/* Header của opblock: bỏ màu đậm, dùng border dưới mảnh */
+.swagger-ui .opblock .opblock-summary {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 16px;
+}
+
+/* Nút method (GET/POST…) – chỉ viền mỏng, màu nhẹ */
+.swagger-ui .opblock-summary-method {
+  min-width: 54px;
+  border-radius: 999px;
+  border: 1px solid #d4d4d8;
+  background: #f9fafb;
+  color: #111827;
+  font-weight: 500;
+}
+
+/* GET màu xanh nhẹ, POST cam nhẹ – vẫn tối giản */
+.swagger-ui .opblock-get .opblock-summary-method {
+  border-color: #6ee7b7;
+  background: #ecfdf5;
+  color: #047857;
+}
+.swagger-ui .opblock-post .opblock-summary-method {
+  border-color: #fed7aa;
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+/* Path + summary */
+.swagger-ui .opblock-summary-path,
+.swagger-ui .opblock-summary-description {
+  font-size: 14px;
+}
+
+/* Body params card */
+.swagger-ui .parameters-container,
+.swagger-ui .opblock .opblock-section {
+  background: #ffffff;
+}
+
+/* Input field giống screenshot: viền mỏng, bo nhẹ */
+.swagger-ui input[type="text"],
+.swagger-ui input[type="search"],
+.swagger-ui input[type="number"],
+.swagger-ui textarea,
+.swagger-ui select {
+  border-radius: 6px !important;
+  border: 1px solid #d4d4d8 !important;
+  box-shadow: none !important;
+  padding: 6px 8px !important;
+}
+
+/* Bảng params gọn hơn */
+.swagger-ui table {
+  border-collapse: collapse;
+}
+.swagger-ui table td,
+.swagger-ui table th {
+  border: none;
+  padding: 6px 4px;
+}
+
+/* Responses list như card phẳng */
+.swagger-ui .responses-wrapper .opblock-section-header {
+  border-bottom: none;
+}
+.swagger-ui .responses-inner {
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Badge status code tối giản, tròn tròn */
+.swagger-ui .response-col_status {
+  font-weight: 500;
+}
+.swagger-ui .response-col_status .response-undocumented {
   border-radius: 999px;
 }
 
-/* Chỉnh lại size chữ description */
-.swagger-ui .opblock-description-wrapper,
-.swagger-ui .response-col_description__inner {
-  font-size: 14px;
-  line-height: 1.6;
+/* 200 – xanh nhẹ, 400/401 đỏ nhẹ */
+.swagger-ui .response-col_status[data-code^="2"] span {
+  background: #ecfdf5;
+  color: #047857;
+}
+.swagger-ui .response-col_status[data-code^="4"] span {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* Nút Authorize */
+.swagger-ui .auth-wrapper .authorize__btn {
+  background: #111827;
+  border-radius: 999px;
+}
+
+/* Nút Try it out, Execute… cho gọn */
+.swagger-ui .btn {
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 13px;
 }
