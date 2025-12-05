@@ -1,11 +1,11 @@
 openapi: 3.0.1
 info:
-  title: New Collection_test_APIdog
+  title: Standard APIs
   description: ''
   version: 1.0.0
 tags: []
 paths:
-  /api/v1/Standard/SearchCompany:
+  https://bidf.fiingroup.vn/api/v1/Standard/SearchCompany:
     get:
       summary: SearchCompany
       deprecated: false
@@ -15,56 +15,56 @@ paths:
         - name: IsinCode
           in: query
           description: ''
-          required: true
+          required: false
           example: ''
           schema:
             type: string
         - name: OrganizationName
           in: query
           description: ''
-          required: true
+          required: false
           example: ''
           schema:
             type: string
         - name: TaxCode
           in: query
           description: ''
-          required: true
+          required: false
           example: ''
           schema:
             type: string
         - name: Ticker
           in: query
           description: ''
-          required: true
+          required: false
           example: ''
           schema:
             type: string
         - name: EnterpriseCode
           in: query
           description: ''
-          required: true
+          required: false
           example: ''
           schema:
             type: string
         - name: Page
           in: query
           description: ''
-          required: true
+          required: false
           example: ''
           schema:
-            type: string
+            type: integer
         - name: PageSize
           in: query
           description: ''
-          required: true
+          required: false
           example: ''
           schema:
-            type: string
+            type: integer
         - name: Accept
           in: header
           description: ''
-          required: false
+          required: true
           example: application/octet-stream
           schema:
             type: string
