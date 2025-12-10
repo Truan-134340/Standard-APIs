@@ -6,7 +6,7 @@ nav:
       - Search Company: search-company.yaml
 plugins:
   - search
-  - openapi
+  - redoc
 
 theme:
   name: readthedocs
