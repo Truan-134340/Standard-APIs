@@ -1,59 +1,62 @@
 # SearchCompany
 Search company by indicator
 
-## Search Company Input Indicators
+<div style="display: flex; gap: 20px;">
 
-|Field Name |Data Type |Description_EN | 
-|-----------|---------|---------|
-|IsinCode          |string   |International Securities Identification Number              |
-|OrganizationName  |string   |Full name of company                                        |
-|TaxCode           |string   |Tax code (Multiple TaxCode can be submitted per API call.)  |
-|EnterpriseCode    |string   |EnterpriseCode                                              |
-|Ticker            |string   |Stock code of company on Exchange                           |
-|Page              |integer  |Page number. Default value: 1                               |
-|PageSize          |integer  |Number of records per page. Default value: 100              |
+  <div style="flex: 1;">
+    <h2>**Search Company Input Indicators**</h2>
 
----
+    | Field Name | Data Type | Description |
+    |-----------|-----------|-------------|
+    | IsinCode | string | International Securities Identification Number |
+    | OrganizationName | string | Full name of company |
+    | TaxCode | string | Multiple TaxCode can be submitted per call |
+    | EnterpriseCode | string | EnterpriseCode |
+    | Ticker | string | Stock code |
+    | Page | integer | Page number |
+    | PageSize | integer | Records per page |
+  </div>
 
-## Query Param
-
-<div id="search-company-ui">
-  <label>
-    IsinCode:
-    <input id="indicator-input" type="text" placeholder="string" />
-  </label>
-  <br/><br/>
-  <label>
-    OrganizationName:
-    <input id="token-input" type="text" placeholder="string" />
-  </label>
-  <br/><br/>
-  <label>
-    TaxCode:
-    <input id="token-input" type="text" placeholder="string" />
-  </label>
-  <br/><br/>
-  <label>
-    Ticker:
-    <input id="token-input" type="text" placeholder="string" />
-  </label>
-  <br/><br/>
-  <label>
-    EnterpriseCode:
-    <input id="token-input" type="text" placeholder="string" />
-  </label>
-  <br/><br/>
-  <label>
-    Page:
-    <input id="token-input" type="password" placeholder="integer" />
-  </label>
-  <br/><br/>
-  <label>
-    PageSize:
-    <input id="token-input" type="password" placeholder="integer" />
-  </label>
-  <br/><br/>
-  <button id="call-btn">Gọi API</button>
+  <div style="flex: 1;">
+    <h2>**Query Param**</h2>
+    <label>
+        IsinCode:
+        <input id="indicator-input" type="text" placeholder="string" />
+      </label>
+      <br/><br/>
+      <label>
+        OrganizationName:
+        <input id="token-input" type="text" placeholder="string" />
+      </label>
+      <br/><br/>
+      <label>
+        TaxCode:
+        <input id="token-input" type="text" placeholder="string" />
+      </label>
+      <br/><br/>
+      <label>
+        Ticker:
+        <input id="token-input" type="text" placeholder="string" />
+      </label>
+      <br/><br/>
+      <label>
+        EnterpriseCode:
+        <input id="token-input" type="text" placeholder="string" />
+      </label>
+      <br/><br/>
+      <label>
+        Page:
+        <input id="token-input" type="password" placeholder="integer" />
+      </label>
+      <br/><br/>
+      <label>
+        PageSize:
+        <input id="token-input" type="password" placeholder="integer" />
+    </label><br/><br/>
+    
+  </div>
+  
+</div>
 
   <h3>Kết quả</h3>
   <pre id="result-box">{ }</pre>
