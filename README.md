@@ -2,5 +2,5 @@
 docs/
  ├── index.md
  ├── api.md
- ├── search-company.md
+ ├── search-company.yaml
  └── openapi.yaml   ← API của bạn
