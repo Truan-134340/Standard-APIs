@@ -1,10 +1,5 @@
 # SearchCompany
 Search company by indicator
-
-<table>
-<tr>
-<td style="vertical-align: top; width: 50%">
-
 <h2>Search Company Input Indicators</h2>
 
 | Field Name | Data Type | Description_EN |
@@ -17,100 +12,8 @@ Search company by indicator
 | Page | integer | Page number. Default: 1 |
 | PageSize | integer | Number of records per page. Default: 100 |
 
-</td>
+<h2>Query Params</h2>
+<form class="param-type rm-APISchema" name="Parameters"><header id="query-params" data-testid="APISchema-SectionHeader" align="center" class="Flex Flex_row APISectionHeader3LN_-QIR0m7x APISectionHeader_title2JS7xZ_m-HAv rm-APISectionHeader" justify="between" style="--flex-gap: 4px; flex-wrap: wrap;"><div class="APISectionHeader-heading4MUMLbp4_nLs APISectionHeader-heading_title15Zd6rYplxPq"><a aria-label="Skip link to Query Params" class="APISectionHeader-anchor1T_cUKoAPu1z" href="#query-params"><span class="IconWrapper Icon-wrapper2z2wVIeGsiUy"><svg fill="none" viewBox="0 0 24 24" class="Icon Icon3_D2ysxFZ_ll Icon-svg2Lm7f6G9Ly5a" data-name="anchor" role="img" aria-hidden="true" style="--icon-color: inherit; --icon-size: var(--icon-sm); --icon-stroke-width: 2px;"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12 22V8M5 12H2a10 10 0 0 0 20 0h-3" class="icon-stroke-width"></path></svg></span></a>Query Params</div></header><div class="rm-ParamContainer "><div class="rjsf" data-testid="form-query-getApiV1StandardSearchcompany"><div class="Param1QyvwHroaCgH Param_topLevel3D0ZGlu38rkq"><div class="Fieldset2vG8BhSgq0S6" id="query-getApiV1StandardSearchcompany"><div class="form-group field field-string Param1QyvwHroaCgH "><div class="Param-contentWrapperSyEvmlFFCPfu"><div class="Param-left7tTo9KK0E0kY"><div class="Param-header3wXBpbDTP1O6"><label class="Param-nameU7CntAa90Wvb" for="query-getApiV1StandardSearchcompany_IsinCode">IsinCode</label><div class="Param-type3QlaE1nrKh1D">string</div><div class="Param-minmax-labelyVZn6AbLUhbo"></div><div class="Param-default-label1hC0WUts0w0E"></div></div></div><div class="Param-form1SoAutupIaz3"><div class="InputDropdownOzifjjbrJipm Dropdown Dropdown_closed" data-testid="dropdown-container"><input class="Input Input_sm Param-input1lad50zOVFPU rm-ParamInput Dropdown-toggle" id="query-getApiV1StandardSearchcompany_IsinCode" label="IsinCode" placeholder="" type="text" autocomplete="off" spellcheck="false" aria-controls="query-getApiV1StandardSearchcompany_IsinCode" aria-expanded="false" role="combobox" aria-haspopup="dialog" value=""></div></div></div></div><div class="form-group field field-string Param1QyvwHroaCgH "><div class="Param-contentWrapperSyEvmlFFCPfu"><div class="Param-left7tTo9KK0E0kY"><div class="Param-header3wXBpbDTP1O6"><label class="Param-nameU7CntAa90Wvb" for="query-getApiV1StandardSearchcompany_OrganizationName">OrganizationName</label><div class="Param-type3QlaE1nrKh1D">string</div><div class="Param-minmax-labelyVZn6AbLUhbo"></div><div class="Param-default-label1hC0WUts0w0E"></div></div></div><div class="Param-form1SoAutupIaz3"><div class="InputDropdownOzifjjbrJipm Dropdown Dropdown_closed" data-testid="dropdown-container"><input class="Input Input_sm Param-input1lad50zOVFPU rm-ParamInput Dropdown-toggle" id="query-getApiV1StandardSearchcompany_OrganizationName" label="OrganizationName" placeholder="" type="text" autocomplete="off" spellcheck="false" aria-controls="query-getApiV1StandardSearchcompany_OrganizationName" aria-expanded="false" role="combobox" aria-haspopup="dialog" value=""></div></div></div></div><div class="form-group field field-string Param1QyvwHroaCgH "><div class="Param-contentWrapperSyEvmlFFCPfu"><div class="Param-left7tTo9KK0E0kY"><div class="Param-header3wXBpbDTP1O6"><label class="Param-nameU7CntAa90Wvb" for="query-getApiV1StandardSearchcompany_TaxCode">TaxCode</label><div class="Param-type3QlaE1nrKh1D">string</div><div class="Param-minmax-labelyVZn6AbLUhbo"></div><div class="Param-default-label1hC0WUts0w0E"></div></div></div><div class="Param-form1SoAutupIaz3"><div class="InputDropdownOzifjjbrJipm Dropdown Dropdown_closed" data-testid="dropdown-container"><input class="Input Input_sm Param-input1lad50zOVFPU rm-ParamInput Dropdown-toggle" id="query-getApiV1StandardSearchcompany_TaxCode" label="TaxCode" placeholder="" type="text" autocomplete="off" spellcheck="false" aria-controls="query-getApiV1StandardSearchcompany_TaxCode" aria-expanded="false" role="combobox" aria-haspopup="dialog" value=""></div></div></div></div><div class="form-group field field-string Param1QyvwHroaCgH "><div class="Param-contentWrapperSyEvmlFFCPfu"><div class="Param-left7tTo9KK0E0kY"><div class="Param-header3wXBpbDTP1O6"><label class="Param-nameU7CntAa90Wvb" for="query-getApiV1StandardSearchcompany_Ticker">Ticker</label><div class="Param-type3QlaE1nrKh1D">string</div><div class="Param-minmax-labelyVZn6AbLUhbo"></div><div class="Param-default-label1hC0WUts0w0E"></div></div></div><div class="Param-form1SoAutupIaz3"><div class="InputDropdownOzifjjbrJipm Dropdown Dropdown_closed" data-testid="dropdown-container"><input class="Input Input_sm Param-input1lad50zOVFPU rm-ParamInput Dropdown-toggle" id="query-getApiV1StandardSearchcompany_Ticker" label="Ticker" placeholder="" type="text" autocomplete="off" spellcheck="false" aria-controls="query-getApiV1StandardSearchcompany_Ticker" aria-expanded="false" role="combobox" aria-haspopup="dialog" value=""></div></div></div></div><div class="form-group field field-string Param1QyvwHroaCgH "><div class="Param-contentWrapperSyEvmlFFCPfu"><div class="Param-left7tTo9KK0E0kY"><div class="Param-header3wXBpbDTP1O6"><label class="Param-nameU7CntAa90Wvb" for="query-getApiV1StandardSearchcompany_EnterpriseCode">EnterpriseCode</label><div class="Param-type3QlaE1nrKh1D">string</div><div class="Param-minmax-labelyVZn6AbLUhbo"></div><div class="Param-default-label1hC0WUts0w0E"></div></div></div><div class="Param-form1SoAutupIaz3"><div class="InputDropdownOzifjjbrJipm Dropdown Dropdown_closed" data-testid="dropdown-container"><input class="Input Input_sm Param-input1lad50zOVFPU rm-ParamInput Dropdown-toggle" id="query-getApiV1StandardSearchcompany_EnterpriseCode" label="EnterpriseCode" placeholder="" type="text" autocomplete="off" spellcheck="false" aria-controls="query-getApiV1StandardSearchcompany_EnterpriseCode" aria-expanded="false" role="combobox" aria-haspopup="dialog" value=""></div></div></div></div><div class="form-group field field-string Param1QyvwHroaCgH "><div class="Param-contentWrapperSyEvmlFFCPfu"><div class="Param-left7tTo9KK0E0kY"><div class="Param-header3wXBpbDTP1O6"><label class="Param-nameU7CntAa90Wvb" for="query-getApiV1StandardSearchcompany_Page">Page</label><div class="Param-type3QlaE1nrKh1D">string</div><div class="Param-minmax-labelyVZn6AbLUhbo"></div><div class="Param-default-label1hC0WUts0w0E">Defaults to 1</div></div></div><div class="Param-form1SoAutupIaz3"><div class="InputDropdownOzifjjbrJipm Dropdown Dropdown_closed" data-testid="dropdown-container"><input class="Input Input_sm Param-input1lad50zOVFPU rm-ParamInput Dropdown-toggle" id="query-getApiV1StandardSearchcompany_Page" label="Page" placeholder="" type="text" autocomplete="off" spellcheck="false" aria-controls="query-getApiV1StandardSearchcompany_Page" aria-expanded="false" role="combobox" aria-haspopup="dialog" value=""></div></div></div></div><div class="form-group field field-string Param1QyvwHroaCgH "><div class="Param-contentWrapperSyEvmlFFCPfu"><div class="Param-left7tTo9KK0E0kY"><div class="Param-header3wXBpbDTP1O6"><label class="Param-nameU7CntAa90Wvb" for="query-getApiV1StandardSearchcompany_PageSize">PageSize</label><div class="Param-type3QlaE1nrKh1D">string</div><div class="Param-minmax-labelyVZn6AbLUhbo"></div><div class="Param-default-label1hC0WUts0w0E">Defaults to 100</div></div></div><div class="Param-form1SoAutupIaz3"><div class="InputDropdownOzifjjbrJipm Dropdown Dropdown_closed" data-testid="dropdown-container"><input class="Input Input_sm Param-input1lad50zOVFPU rm-ParamInput Dropdown-toggle" id="query-getApiV1StandardSearchcompany_PageSize" label="PageSize" placeholder="" type="text" autocomplete="off" spellcheck="false" aria-controls="query-getApiV1StandardSearchcompany_PageSize" aria-expanded="false" role="combobox" aria-haspopup="dialog" value=""></div></div></div></div></div></div></div></div></form>
 
-<td style="vertical-align: top; width: 50%">
-
-<h2>Query Param</h2>
-
-<div id="search-company-ui">
-
-<label>
-  IsinCode:<br/>
-  <input type="text" placeholder="string">
-</label>
-<br/><br/>
-
-<label>
-  OrganizationName:<br/>
-  <input type="text" placeholder="string">
-</label>
-<br/><br/>
-
-<label>
-  TaxCode:<br/>
-  <input type="text" placeholder="string">
-</label>
-<br/><br/>
-
-<label>
-  Ticker:<br/>
-  <input type="text" placeholder="string">
-</label>
-
-<label>
-  EnterpriseCode:<br/>
-  <input type="text" placeholder="string">
-</label>
-<br/><br/>
-
-<label>
-  Page:<br/>
-  <input type="text" placeholder="string">
-</label>
-<br/><br/>
-
-<label>
-  PageSize:<br/>
-  <input type="text" placeholder="string">
-</label>
-</div>
-
-</td>
-</tr>
-</table>
-
-
-  <h3>Kết quả</h3>
-  <pre id="result-box">{ }</pre>
-</div>
-
-<script>
-document.getElementById('call-btn').addEventListener('click', async () => {
-  const indicator = document.getElementById('indicator-input').value.trim();
-  const token = document.getElementById('token-input').value.trim();
-
-  if (!indicator) {
-    alert('Vui lòng nhập indicator');
-    return;
-  }
-
-  const url = 'https://your-domain.com/api/v1/Standard/SearchCompany'
-            + '?indicator=' + encodeURIComponent(indicator);
-
-  const headers = {
-    'Accept': 'application/json'
-  };
-  if (token) {
-    headers['Authorization'] = 'Bearer ' + token;
-  }
-
-  try {
-    const res = await fetch(url, { headers });
-    const text = await res.text();
-    let data;
-    try {
-      data = JSON.parse(text);
-    } catch {
-      data = text;
-    }
-
-    document.getElementById('result-box').textContent =
-      typeof data === 'string'
-        ? data
-        : JSON.stringify(data, null, 2);
-  } catch (err) {
-    document.getElementById('result-box').textContent = 'Error: ' + err;
-  }
-});
-</script>
+<h2>Response</h2>
+<h1 class="AccordionToggle2c6jPP7vVvLS APIResponseSchemaPicker-option-toggle1Rk-RliJASLl "><button aria-controls="AccordionPanel-3ac4f4cc-5ba4-4888-b8d8-dd14ec6637bc" aria-expanded="false" id="AccordionPanel-3ac4f4cc-5ba4-4888-b8d8-dd14ec6637bc-toggle" type="button"><div><div class="APIResponseSchemaPicker-label3XMQ9E-slNcS"><code class="APIResponseSchemaPicker-label-text3bDdrQX1B-h4 HTTPStatus HTTPStatus_2"><span aria-hidden="false" aria-label="200" class="HTTPStatus-chit" role="img"></span></code> 200</div><div class="rm-Markdown markdown-body APIResponseSchemaPicker-description19iNatTizvwb" data-testid="RDMD"><p>Successful response</p></div></div><div class="AccordionToggle-icon-slot1bf45OBGkGPr"><span class="IconWrapper Icon-wrapper2z2wVIeGsiUy"><svg fill="none" viewBox="0 0 24 24" class="Icon Icon3_D2ysxFZ_ll Icon-svg2Lm7f6G9Ly5a AccordionToggle-iconDAVsqS10Xl8E" data-name="chevron-right" role="img" aria-label="Chevron" style="--icon-color: inherit; --icon-size: inherit; --icon-stroke-width: 2px;"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6" class="icon-stroke-width"></path></svg></span></div></button></h1>
