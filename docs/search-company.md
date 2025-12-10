@@ -3,17 +3,15 @@ Search company by indicator
 
 ## Search Company Input Indicators
 
-| Field Name | Data Type | Description_EN | 
+|Field Name |Data Type |Description_EN | 
 |-----------|---------|---------|
-|IsinCode        |string |International Securities Identification Number            |
-|OrganizationName|string |Full name of company                                      |
-|TaxCode         |string |Tax code (Multiple TaxCode can be submitted per API call.)|
-|EnterpriseCode  |string |EnterpriseCode                                            |
-|Ticker          |string |Stock code of company on Exchange                         |
-|Page            |integer|Page number. Default value: 1                             |
-|PageSize        |integer|Number of records per page. Default value: 100            |
-
-
+|IsinCode          |string   |International Securities Identification Number              |
+|OrganizationName  |string   |Full name of company                                        |
+|TaxCode           |string   |Tax code (Multiple TaxCode can be submitted per API call.)  |
+|EnterpriseCode    |string   |EnterpriseCode                                              |
+|Ticker            |string   |Stock code of company on Exchange                           |
+|Page              |integer  |Page number. Default value: 1                               |
+|PageSize          |integer  |Number of records per page. Default value: 100              |
 
 ---
 
