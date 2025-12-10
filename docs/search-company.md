@@ -51,4 +51,57 @@ Search company by indicator
 </div>
 
 <h2>Response</h2>
-<h1 class="AccordionToggle2c6jPP7vVvLS APIResponseSchemaPicker-option-toggle1Rk-RliJASLl "><button aria-controls="AccordionPanel-3ac4f4cc-5ba4-4888-b8d8-dd14ec6637bc" aria-expanded="false" id="AccordionPanel-3ac4f4cc-5ba4-4888-b8d8-dd14ec6637bc-toggle" type="button"><div><div class="APIResponseSchemaPicker-label3XMQ9E-slNcS"><code class="APIResponseSchemaPicker-label-text3bDdrQX1B-h4 HTTPStatus HTTPStatus_2"><span aria-hidden="false" aria-label="200" class="HTTPStatus-chit" role="img"></span></code> 200</div><div class="rm-Markdown markdown-body APIResponseSchemaPicker-description19iNatTizvwb" data-testid="RDMD"><p>Successful response</p></div></div><div class="AccordionToggle-icon-slot1bf45OBGkGPr"><span class="IconWrapper Icon-wrapper2z2wVIeGsiUy"><svg fill="none" viewBox="0 0 24 24" class="Icon Icon3_D2ysxFZ_ll Icon-svg2Lm7f6G9Ly5a AccordionToggle-iconDAVsqS10Xl8E" data-name="chevron-right" role="img" aria-label="Chevron" style="--icon-color: inherit; --icon-size: inherit; --icon-stroke-width: 2px;"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6" class="icon-stroke-width"></path></svg></span></div></button></h1>
+
+<!-- 200 OK -->
+<details>
+  <summary style="display:flex; align-items:center; gap:10px; cursor:pointer; padding:6px 0;">
+    <span style="background:#d1fae5; color:#065f46; padding:4px 10px; border-radius:6px; font-weight:600;">
+      200
+    </span>
+    <span>Successful response</span>
+  </summary>
+
+  <pre>
+{
+  "data": [],
+  "page": 1,
+  "pageSize": 20,
+  "totalRecords": 0
+}
+  </pre>
+</details>
+
+<!-- 400 Bad Request -->
+<details>
+  <summary style="display:flex; align-items:center; gap:10px; cursor:pointer; padding:6px 0;">
+    <span style="background:#fee2e2; color:#991b1b; padding:4px 10px; border-radius:6px; font-weight:600;">
+      400
+    </span>
+    <span>Bad Request</span>
+  </summary>
+
+  <pre>
+{
+  "errorCode": "INVALID_PARAMETER",
+  "message": "One or more parameters are invalid."
+}
+  </pre>
+</details>
+
+<!-- 500 Internal Server Error -->
+<details>
+  <summary style="display:flex; align-items:center; gap:10px; cursor:pointer; padding:6px 0;">
+    <span style="background:#fca5a5; color:#7f1d1d; padding:4px 10px; border-radius:6px; font-weight:600;">
+      500
+    </span>
+    <span>Internal Server Error</span>
+  </summary>
+
+  <pre>
+{
+  "errorCode": "INTERNAL_ERROR",
+  "message": "Unexpected error occurred. Please try again later."
+}
+  </pre>
+</details>
+
