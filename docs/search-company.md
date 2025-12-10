@@ -105,3 +105,5 @@ Search company by indicator
   </pre>
 </details>
 
+👉 See full API and Try It console in the API Reference:
+[Search Company API](docs/search-company.yaml)
