@@ -3,7 +3,7 @@ site_name: Standard APIs Docs
 nav:
   - Home: index.md
   - APIs:
-      - Search Company: search-company.yaml
+      - Search Company: search-company.md
       - Full API Reference: api.md
 plugins:
   - search
