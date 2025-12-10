@@ -5,6 +5,9 @@ nav:
   - APIs:
       - Search Company: search-company.md
       - Full API Reference: api.md
+plugins:
+  - search
+  - openapi
 
 theme:
   name: readthedocs
