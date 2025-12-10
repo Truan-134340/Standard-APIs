@@ -1,3 +1,5 @@
+::: openapi
+    file: search-company.yaml
 # SearchCompany
 Search company by indicator
 <h2>Search Company Input Indicators</h2>
