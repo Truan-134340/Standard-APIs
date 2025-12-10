@@ -8,6 +8,16 @@ paths:
       summary: SearchCompany
       deprecated: false
       description: Search company by indicator
+       ### Search Company Input Indicators
+
+        | Field Name     | Type    | Description                                  |
+        |----------------|---------|----------------------------------------------|
+        | IsinCode       | string  | International Securities Identification ...  |
+        | OrganizationName | string| Full name of the company                     |
+        | TaxCode        | string  | Company tax code                             |
+        | Ticker         | string  | Stock code                                   |
+        | Page           | integer | Page number (default 1)                      |
+        | PageSize       | integer | Records per page (default 100)               |
       
       parameters:
         - name: IsinCode
