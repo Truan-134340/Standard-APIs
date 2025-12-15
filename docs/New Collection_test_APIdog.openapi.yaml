@@ -1,0 +1,175 @@
+openapi: 3.0.1
+info:
+  title: New Collection_test_APIdog
+  description: ''
+  version: 1.0.0
+tags: []
+paths:
+  /api/v1/Standard/SearchCompany:
+    get:
+      summary: SearchCompany
+      deprecated: false
+      description: Search company by indicator
+      tags: []
+      parameters:
+        - name: IsinCode
+          in: query
+          description: ''
+          required: true
+          example: ''
+          schema:
+            type: string
+        - name: OrganizationName
+          in: query
+          description: ''
+          required: true
+          example: ''
+          schema:
+            type: string
+        - name: TaxCode
+          in: query
+          description: ''
+          required: true
+          example: ''
+          schema:
+            type: string
+        - name: Ticker
+          in: query
+          description: ''
+          required: true
+          example: ''
+          schema:
+            type: string
+        - name: EnterpriseCode
+          in: query
+          description: ''
+          required: true
+          example: ''
+          schema:
+            type: string
+        - name: Page
+          in: query
+          description: ''
+          required: true
+          example: ''
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: ''
+          required: true
+          example: ''
+          schema:
+            type: string
+        - name: Accept
+          in: header
+          description: ''
+          required: false
+          example: application/octet-stream
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      security:
+        - bearer: []
+  /api/v1/Standard/CompanyInformations:
+    post:
+      summary: CompanyInformations
+      deprecated: false
+      description: Data based on the company's registration information
+      tags: []
+      parameters:
+        - name: TaxCode
+          in: query
+          description: ''
+          required: false
+          example: '0104781118'
+          schema:
+            type: string
+        - name: Accept
+          in: header
+          description: ''
+          required: false
+          example: application/octet-stream
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          description: ''
+          required: true
+          example: Bearer {{access_token}}
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                organizationIds:
+                  type: array
+                  items:
+                    type: integer
+                taxCodes:
+                  type: array
+                  items:
+                    type: string
+                updateFrom:
+                  type: string
+                updateTo:
+                  type: string
+                status:
+                  type: string
+                page:
+                  type: integer
+                pageSize:
+                  type: integer
+              required:
+                - organizationIds
+                - taxCodes
+                - updateFrom
+                - updateTo
+                - status
+                - page
+                - pageSize
+            example:
+              organizationIds:
+                - 0
+              taxCodes:
+                - string
+              updateFrom: '2025-11-27T04:35:59.630Z'
+              updateTo: '2025-11-27T04:35:59.630Z'
+              status: Active
+              page: 0
+              pageSize: 0
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      security:
+        - bearer: []
+components:
+  schemas: {}
+  responses: {}
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+servers: []
+security: []
