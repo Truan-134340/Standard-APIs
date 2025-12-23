@@ -1,5 +1,8 @@
 site_name: Standard APIs Docs
-
+plugins:
+  - swagger-ui:
+      spec_url: openapi/search-company.yaml
+      try_it_out_enabled: true
 nav:
   - Home: index.md
   - APIs:
