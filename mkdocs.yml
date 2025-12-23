@@ -7,6 +7,8 @@ nav:
   - Home: index.md
   - APIs:
       - Search Company: search-company.md
+      - Search Company (Try): swagger-ui.html
+search-company.md
 
 theme:
   name: readthedocs
