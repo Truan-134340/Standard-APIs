@@ -1,7 +1,8 @@
 openapi: 3.0.1
 info:
   title: Standard APIs
-
+servers:
+  - url: https://bidf.fiingroup.vn/api/v1/Standard/SearchCompany
 paths:
   https://bidf.fiingroup.vn/api/v1/Standard/SearchCompany:
     get:
