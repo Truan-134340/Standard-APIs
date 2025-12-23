@@ -19,31 +19,31 @@ Search company by indicator
     <h3>Query Params</h3>
 
     <label>IsinCode<br/>
-      <input type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
+      <input id="IsinCode" type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
     </label><br/><br/>
 
     <label>OrganizationName<br/>
-      <input type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
+      <input id="OrganizationName" type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
     </label><br/><br/>
 
     <label>TaxCode<br/>
-      <input type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
+      <input id="TaxCode" type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
     </label><br/><br/>
 
     <label>Ticker<br/>
-      <input type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
+      <input id="Ticker" type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
     </label><br/><br/>
 
     <label>EnterpriseCode<br/>
-      <input type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
+      <input id="EnterpriseCode" type="text" placeholder="string" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
     </label><br/><br/>
 
     <label>Page<br/>
-      <input type="number" placeholder="1" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
+      <input id="Page" type="number" placeholder="1" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
     </label><br/><br/>
 
     <label>PageSize<br/>
-      <input type="number" placeholder="100" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
+      <input id="PageSize" type="number" placeholder="100" style="width:100%; padding:6px; border:1px solid #ccc; border-radius:4px;">
     </label>
 
   </div>
@@ -116,5 +116,88 @@ Search company by indicator
   </pre>
 </details>
 
-👉 See full API and Try It console in the API Reference:
-[Search Company API](docs/search-company.yaml)
+<script>
+(function () {
+  const BASE = "https://bidf.fiingroup.vn/api/v1/Standard";
+  const PATH = "/SearchCompany";
+
+  function val(id) {
+    const el = document.getElementById(id);
+    return el ? el.value.trim() : "";
+  }
+
+  function buildUrl() {
+    const params = new URLSearchParams();
+
+    // chỉ add nếu có value (tránh gửi query rỗng)
+    const IsinCode = val("IsinCode");
+    const OrganizationName = val("OrganizationName");
+    const TaxCode = val("TaxCode");
+    const Ticker = val("Ticker");
+    const EnterpriseCode = val("EnterpriseCode");
+    const Page = val("Page");
+    const PageSize = val("PageSize");
+
+    if (IsinCode) params.set("IsinCode", IsinCode);
+    if (OrganizationName) params.set("OrganizationName", OrganizationName);
+    if (TaxCode) params.set("TaxCode", TaxCode);
+    if (Ticker) params.set("Ticker", Ticker);
+    if (EnterpriseCode) params.set("EnterpriseCode", EnterpriseCode);
+    if (Page) params.set("Page", Page);
+    if (PageSize) params.set("PageSize", PageSize);
+
+    const qs = params.toString();
+    return BASE + PATH + (qs ? ("?" + qs) : "");
+  }
+
+  async function run() {
+    const statusEl = document.getElementById("tryStatus");
+    const resultEl = document.getElementById("tryResult");
+    const btn = document.getElementById("btnTry");
+
+    const url = buildUrl();
+
+    // (Tuỳ chọn) nếu API cần Bearer token: lưu token trong localStorage rồi đọc ra
+    // localStorage.setItem("api_token", "YOUR_TOKEN");
+    const token = localStorage.getItem("api_token"); // để trống nếu không dùng auth
+
+    statusEl.textContent = "Calling: " + url;
+    resultEl.style.display = "none";
+    resultEl.textContent = "";
+    btn.disabled = true;
+    btn.style.opacity = "0.6";
+
+    try {
+      const headers = {
+        "Accept": "application/json"
+      };
+      if (token) headers["Authorization"] = "Bearer " + token;
+
+      const resp = await fetch(url, { method: "GET", headers });
+
+      const text = await resp.text(); // đọc thô để tránh lỗi JSON parse
+      statusEl.textContent = "HTTP " + resp.status;
+
+      // hiển thị đẹp nếu là JSON
+      let pretty = text;
+      try { pretty = JSON.stringify(JSON.parse(text), null, 2); } catch(e) {}
+
+      resultEl.textContent = pretty;
+      resultEl.style.display = "block";
+    } catch (e) {
+      statusEl.textContent = "ERROR: " + (e && e.message ? e.message : e);
+      resultEl.textContent =
+        "Nếu bạn thấy lỗi CORS (blocked by CORS policy) thì cần backend bật CORS cho domain docs.";
+      resultEl.style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.style.opacity = "1";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("btnTry");
+    if (btn) btn.addEventListener("click", run);
+  });
+})();
+</script>
