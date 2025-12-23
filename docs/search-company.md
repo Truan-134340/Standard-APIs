@@ -49,6 +49,17 @@ Search company by indicator
   </div>
 
 </div>
+<!-- TRY BOX -->
+<div style="display:flex; align-items:center; gap:16px; margin: 12px 0;">
+  <button id="btnTry"
+    style="margin-left:auto; padding:14px 24px; border:2px solid red; background:white; color:red; font-size:22px; cursor:pointer;">
+    try
+  </button>
+</div>
+
+<div id="tryStatus" style="margin: 8px 0; font-weight:600;"></div>
+
+<pre id="tryResult" style="white-space:pre-wrap; border:1px solid #eee; padding:12px; border-radius:6px; display:none;"></pre>
 
 <h2>Response</h2>
 
