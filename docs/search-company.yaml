@@ -1,77 +1,98 @@
 openapi: 3.0.1
 info:
   title: Standard APIs
+  version: "1.0.0"
+
 servers:
   - url: https://bidf.fiingroup.vn/api/v1/Standard
+
 paths:
   /SearchCompany:
     get:
       summary: SearchCompany
-      deprecated: true
-      description: Search company by indicator
-       ### Search Company Input Indicators
+      description: |
+        Search company by indicator
 
-        | Field Name     | Type    | Description                                  |
-        |----------------|---------|----------------------------------------------|
-        | IsinCode       | string  | International Securities Identification ...  |
-        | OrganizationName | string| Full name of the company                     |
-        | TaxCode        | string  | Company tax code                             |
-        | Ticker         | string  | Stock code                                   |
-        | Page           | integer | Page number (default 1)                      |
-        | PageSize       | integer | Records per page (default 100)               |
-      
+        ### Search Company Input Indicators
+
+        | Field Name        | Type    | Description |
+        |------------------|---------|-------------|
+        | IsinCode         | string  | International Securities Identification ... |
+        | OrganizationName | string  | Full name of the company |
+        | TaxCode          | string  | Company tax code |
+        | Ticker           | string  | Stock code |
+        | EnterpriseCode   | string  | Enterprise code |
+        | Page             | integer | Page number (default 1) |
+        | PageSize         | integer | Records per page (default 100) |
+
       parameters:
         - name: IsinCode
           in: query
-          description: ''
           required: false
           schema:
             type: string
+
         - name: OrganizationName
           in: query
           required: false
           schema:
             type: string
+
         - name: TaxCode
           in: query
           required: false
           schema:
             type: string
+
         - name: Ticker
           in: query
           required: false
           schema:
             type: string
+
         - name: EnterpriseCode
           in: query
           required: false
           schema:
             type: string
+
         - name: Page
           in: query
           required: false
           schema:
             type: integer
+            default: 1
+            minimum: 1
+
         - name: PageSize
           in: query
           required: false
           schema:
             type: integer
-
-    requestBody:
-      required: true
-      content:
-        application/json:
-          schema:
-            type: object
+            default: 100
+            minimum: 1
+            maximum: 1000
 
       responses:
-        '200':
-          description: ''
+        "200":
+          description: Successful response
           content:
             application/json:
               schema:
                 type: object
-                properties: {}
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "500":
+          description: Internal Server Error
+
       security:
         - bearer: []
+
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
