@@ -1,4 +1,7 @@
 # SearchCompany
+<redoc spec-url="../openapi/search-company.yaml"></redoc>
+<script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
+
 Search company by indicator
 <h2>Search Company Input Indicators</h2>
 
