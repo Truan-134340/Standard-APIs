@@ -3,7 +3,7 @@ site_name: Standard APIs Docs
 nav:
   - Home: index.md
   - APIs:
-      - Search Company: search-company.md
+      - Search Company: search-company.yaml
 
 theme:
   name: readthedocs
