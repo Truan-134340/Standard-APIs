@@ -1,8 +1,5 @@
 site_name: Standard APIs Docs
 
-plugins:
-  - swagger-ui-tag
-
 nav:
   - Home: index.md
   - APIs:
