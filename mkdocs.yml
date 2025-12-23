@@ -6,7 +6,7 @@ plugins:
 nav:
   - Home: index.md
   - APIs:
-      - Search Company: search-company.yaml
+      - Search Company: search-company.md
 
 theme:
   name: readthedocs
