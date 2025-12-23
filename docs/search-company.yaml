@@ -2,12 +2,12 @@ openapi: 3.0.1
 info:
   title: Standard APIs
 servers:
-  - url: https://bidf.fiingroup.vn/api/v1/Standard/SearchCompany
+  - url: https://bidf.fiingroup.vn/api/v1/Standard
 paths:
-  https://bidf.fiingroup.vn/api/v1/Standard/SearchCompany:
+  /SearchCompany:
     get:
       summary: SearchCompany
-      deprecated: false
+      deprecated: true
       description: Search company by indicator
        ### Search Company Input Indicators
 
