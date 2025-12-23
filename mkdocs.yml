@@ -1,8 +1,8 @@
 site_name: Standard APIs Docs
+
 plugins:
-  - swagger-ui:
-      spec_url: openapi/search-company.yaml
-      try_it_out_enabled: true
+  - swagger-ui-tag
+
 nav:
   - Home: index.md
   - APIs:
@@ -10,4 +10,3 @@ nav:
 
 theme:
   name: readthedocs
-
